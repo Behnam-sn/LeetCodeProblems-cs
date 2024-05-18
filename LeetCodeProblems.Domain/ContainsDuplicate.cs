@@ -2,7 +2,7 @@
 
 public class ContainsDuplicate
 {
-    public bool Solution(int[] nums)
+    public static bool Solution(int[] nums)
     {
         var hashset = new HashSet<int>();
 
