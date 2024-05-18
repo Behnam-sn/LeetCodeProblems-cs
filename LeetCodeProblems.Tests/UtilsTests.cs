@@ -1,3 +1,5 @@
+using LeetCodeProblems.Domain.Shared;
+
 namespace LeetCodeProblems.Tests
 {
     public class UtilsTests

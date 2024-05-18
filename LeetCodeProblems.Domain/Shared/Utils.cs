@@ -1,4 +1,4 @@
-namespace LeetCodeProblems.Domain;
+namespace LeetCodeProblems.Domain.Shared;
 
 public class Utils
 {

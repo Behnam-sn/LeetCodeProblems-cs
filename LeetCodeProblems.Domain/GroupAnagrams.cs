@@ -1,4 +1,6 @@
-﻿namespace LeetCodeProblems.Domain;
+﻿using LeetCodeProblems.Domain.Shared;
+
+namespace LeetCodeProblems.Domain;
 
 public class GroupAnagrams
 {
