@@ -1,4 +1,6 @@
-namespace LeetCodeProblems.Domain;
+using LeetCodeProblems.Shared;
+
+namespace LeetCodeProblems;
 public class MergeTwoSortedLists
 {
     public ListNode? Solution(ListNode? list1, ListNode? list2)

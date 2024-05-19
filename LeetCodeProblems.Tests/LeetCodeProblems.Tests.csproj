@@ -22,7 +22,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\LeetCodeProblems.Domain\LeetCodeProblems.Domain.csproj" />
+		<ProjectReference Include="..\LeetCodeProblems\LeetCodeProblems.csproj" />
 	</ItemGroup>
 
 </Project>

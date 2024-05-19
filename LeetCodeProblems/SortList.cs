@@ -1,6 +1,6 @@
-using LeetCodeProblems.Domain.Shared;
+using LeetCodeProblems.Shared;
 
-namespace LeetCodeProblems.Domain;
+namespace LeetCodeProblems;
 public class SortList
 {
     public ListNode? Solution(ListNode? head)

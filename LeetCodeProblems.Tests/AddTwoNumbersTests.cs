@@ -1,4 +1,4 @@
-using LeetCodeProblems.Domain.Shared;
+using LeetCodeProblems.Shared;
 
 namespace LeetCodeProblems.Tests;
 

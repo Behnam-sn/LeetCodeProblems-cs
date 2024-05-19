@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeetCodeProblems.Domain", "LeetCodeProblems.Domain\LeetCodeProblems.Domain.csproj", "{564F91D8-1EED-4B7C-A3CF-560059843D4E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeetCodeProblems", "LeetCodeProblems\LeetCodeProblems.csproj", "{564F91D8-1EED-4B7C-A3CF-560059843D4E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeetCodeProblems.Tests", "LeetCodeProblems.Tests\LeetCodeProblems.Tests.csproj", "{44DC6F3A-6079-48FC-9E3D-17265BE4289A}"
 EndProject

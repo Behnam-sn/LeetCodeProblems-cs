@@ -1,4 +1,6 @@
-namespace LeetCodeProblems.Domain;
+using LeetCodeProblems.Shared;
+
+namespace LeetCodeProblems;
 
 public class AddTwoNumbers
 {

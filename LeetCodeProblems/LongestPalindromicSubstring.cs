@@ -1,4 +1,4 @@
-namespace LeetCodeProblems.Domain;
+namespace LeetCodeProblems;
 
 public class LongestPalindromicSubstring
 {

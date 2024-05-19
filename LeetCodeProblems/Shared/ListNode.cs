@@ -1,4 +1,4 @@
-namespace LeetCodeProblems.Domain;
+namespace LeetCodeProblems.Shared;
 
 public class ListNode
 {
