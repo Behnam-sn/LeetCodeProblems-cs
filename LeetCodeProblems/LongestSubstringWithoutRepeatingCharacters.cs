@@ -2,7 +2,7 @@ namespace LeetCodeProblems;
 
 public class LongestSubstringWithoutRepeatingCharacters
 {
-    public int Solution(string s)
+    public static int Solution(string s)
     {
         var longest = 0;
         List<char> charList;
