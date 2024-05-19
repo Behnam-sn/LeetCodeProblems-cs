@@ -4,13 +4,13 @@ public class LongestConsecutiveSequence
 {
     public static int Solution(int[] nums)
     {
-        if (nums.Length < 0)
+        if (nums.Length < 2)
         {
             return nums.Length;
         }
 
         var items = new HashSet<int>(nums);
-        var longest = 0;
+        var longest = 1;
 
         foreach (var item in items)
         {
@@ -19,7 +19,7 @@ public class LongestConsecutiveSequence
                 continue;
             }
 
-            var length = 0;
+            var length = 1;
             while (items.Contains(item + length))
             {
                 length++;
