@@ -2,71 +2,29 @@ namespace LeetCodeProblems.Tests;
 
 public class LongestPalindromicSubstringTests
 {
-    private readonly LongestPalindromicSubstring sut;
-
-    public LongestPalindromicSubstringTests()
-    {
-        sut = new();
-    }
-
-    [Fact]
-    public void Test1()
+    [Theory]
+    [InlineData("a", new string[] { "a" })]
+    [InlineData("babad", new string[] { "aba", "bab" })]
+    [InlineData("cbbd", new string[] { "bb" })]
+    [InlineData("cbbbbd", new string[] { "bbbb" })]
+    [InlineData("", new string[] { "" })]
+    public void Test_Pass(string s, string[] collection)
     {
         // Given
         // When
-        var actual = sut.Solution("a");
+        var expected = LongestPalindromicSubstring.Solution(s);
         // Then
-        Assert.Equal("a", actual);
+        Assert.Contains(expected, collection);
     }
 
     [Fact]
     public void Test2()
     {
         // Given
-        // When
-        var actual = sut.Solution("babad");
-        // Then
-        Assert.Contains(actual, new List<string> { "aba", "bab" });
-    }
-
-    [Fact]
-    public void Test3()
-    {
-        // Given
-        // When
-        var actual = sut.Solution("cbbd");
-        // Then
-        Assert.Equal("bb", actual);
-    }
-
-    [Fact]
-    public void Test4()
-    {
-        // Given
         var s = "abcd";
         // When
-        var actual = sut.Solution(s);
+        var actual = LongestPalindromicSubstring.Solution(s);
         // Then
         Assert.Contains(actual, s);
-    }
-
-    [Fact]
-    public void Test5()
-    {
-        // Given
-        // When
-        var actual = sut.Solution("");
-        // Then
-        Assert.Equal("", actual);
-    }
-
-    [Fact]
-    public void Test6()
-    {
-        // Given
-        // When
-        var actual = sut.Solution("cbbbbd");
-        // Then
-        Assert.Equal("bbbb", actual);
     }
 }
