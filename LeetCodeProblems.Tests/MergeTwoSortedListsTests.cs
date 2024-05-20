@@ -1,50 +1,23 @@
 using LeetCodeProblems.Shared;
 
-namespace LeetCodeProblems.Tests
+namespace LeetCodeProblems.Tests;
+
+public class MergeTwoSortedListsTests
 {
-    public class MergeTwoSortedListsTests
+    public static IEnumerable<object[]> GetData()
     {
-        private readonly MergeTwoSortedLists sut;
+        yield return new object[] { Utils.StringToListNode("124"), Utils.StringToListNode("134"), "112344" };
+        yield return new object[] { Utils.StringToListNode(""), Utils.StringToListNode(""), "" };
+        yield return new object[] { Utils.StringToListNode(""), Utils.StringToListNode("0"), "0" };
+    }
 
-        public MergeTwoSortedListsTests()
-        {
-            sut = new();
-        }
-
-        [Fact]
-        public void Test1()
-        {
-            // Given
-            var l1 = Utils.StringToListNode("124");
-            var l2 = Utils.StringToListNode("134");
-            // When
-            var result = sut.Solution(l1, l2);
-            // Then
-            Assert.Equal("112344", Utils.ListNodeToString(result));
-        }
-
-        [Fact]
-        public void Test2()
-        {
-            // Given
-            var l1 = Utils.StringToListNode("");
-            var l2 = Utils.StringToListNode("");
-            // When
-            var result = sut.Solution(l1, l2);
-            // Then
-            Assert.Equal("", Utils.ListNodeToString(result));
-        }
-
-        [Fact]
-        public void Test3()
-        {
-            // Given
-            var l1 = Utils.StringToListNode("");
-            var l2 = Utils.StringToListNode("0");
-            // When
-            var result = sut.Solution(l1, l2);
-            // Then
-            Assert.Equal("0", Utils.ListNodeToString(result));
-        }
+    [Theory]
+    [MemberData(nameof(GetData))]
+    public void Test(ListNode l1, ListNode l2, string expected)
+    {
+        // When
+        var actual = MergeTwoSortedLists.Solution(l1, l2);
+        // Then
+        Assert.Equal(expected, Utils.ListNodeToString(actual));
     }
 }

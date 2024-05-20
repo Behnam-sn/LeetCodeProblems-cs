@@ -1,9 +1,10 @@
 using LeetCodeProblems.Shared;
 
 namespace LeetCodeProblems;
+
 public class MergeTwoSortedLists
 {
-    public ListNode? Solution(ListNode? list1, ListNode? list2)
+    public static ListNode? Solution(ListNode? list1, ListNode? list2)
     {
         if (list1 != null && list2 != null)
         {
