@@ -2,7 +2,7 @@
 
 public class ValidSudokuTests
 {
-    public static IEnumerable<object[]> GetNumbers()
+    public static IEnumerable<object[]> GetData()
     {
         yield return new object[] { new char[][]
         {
@@ -103,7 +103,7 @@ public class ValidSudokuTests
     }
 
     [Theory]
-    [MemberData(nameof(GetNumbers))]
+    [MemberData(nameof(GetData))]
     public void Test(char[][] board, bool expected)
     {
         // Given
