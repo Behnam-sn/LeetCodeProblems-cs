@@ -4,7 +4,7 @@ namespace LeetCodeProblems;
 
 public class GroupAnagrams
 {
-    public IList<IList<string>> Solution(string[] strs)
+    public static IList<IList<string>> Solution(string[] strs)
     {
         var groups = new Dictionary<string, IList<string>>();
 
