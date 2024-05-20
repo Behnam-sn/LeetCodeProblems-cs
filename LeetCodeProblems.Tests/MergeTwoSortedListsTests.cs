@@ -15,6 +15,7 @@ public class MergeTwoSortedListsTests
     [MemberData(nameof(GetData))]
     public void Test(ListNode l1, ListNode l2, string expected)
     {
+        // Given
         // When
         var actual = MergeTwoSortedLists.Solution(l1, l2);
         // Then

@@ -2,7 +2,7 @@
 
 public class ProductOfArrayExceptSelf
 {
-    public int[] Solution(int[] nums)
+    public static int[] Solution(int[] nums)
     {
         var result = new int[nums.Length];
 
@@ -24,7 +24,7 @@ public class ProductOfArrayExceptSelf
         return result;
     }
 
-    public int[] Solution1(int[] nums)
+    public static int[] Solution1(int[] nums)
     {
         var result = new int[nums.Length];
 
