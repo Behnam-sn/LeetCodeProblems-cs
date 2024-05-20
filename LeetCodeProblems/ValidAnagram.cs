@@ -2,7 +2,7 @@
 
 public class ValidAnagram
 {
-    public bool Solution(string s, string t)
+    public static bool Solution(string s, string t)
     {
         var sChars = ConvertStringToListOfChars(s);
         var tChars = ConvertStringToListOfChars(t);
@@ -13,7 +13,7 @@ public class ValidAnagram
         return Enumerable.SequenceEqual(sChars, tChars);
     }
 
-    public bool Solution1(string s, string t)
+    public static bool Solution1(string s, string t)
     {
         if (s.Length != t.Length) return false;
         if (s == t) return true;
