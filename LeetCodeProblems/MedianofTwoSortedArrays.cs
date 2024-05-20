@@ -2,7 +2,7 @@ namespace LeetCodeProblems;
 
 public class MedianofTwoSortedArrays
 {
-    public double Solution(int[] nums1, int[] nums2)
+    public static double Solution(int[] nums1, int[] nums2)
     {
         var merged = nums1.Concat(nums2).ToArray();
         Array.Sort(merged);

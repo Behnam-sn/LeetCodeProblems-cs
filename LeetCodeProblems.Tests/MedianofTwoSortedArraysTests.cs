@@ -1,48 +1,17 @@
-namespace LeetCodeProblems.Tests
+namespace LeetCodeProblems.Tests;
+
+public class MedianofTwoSortedArraysTests
 {
-    public class MedianofTwoSortedArraysTests
+    [Theory]
+    [InlineData(new int[] { 1, 3 }, new int[] { 2 }, 2.00000)]
+    [InlineData(new int[] { 1, 2 }, new int[] { 3, 4 }, 2.50000)]
+    [InlineData(new int[] { 1, 1 }, new int[] { 1, 2 }, 1.00000)]
+    public void Test(int[] nums1, int[] nums2, double expected)
     {
-        private readonly MedianofTwoSortedArrays sut;
-
-        public MedianofTwoSortedArraysTests()
-        {
-            sut = new();
-        }
-
-        [Fact]
-        public void Test1()
-        {
-            // Given
-            var nums1 = new int[] { 1, 3 };
-            var nums2 = new int[] { 2 };
-            // When
-            var acual = sut.Solution(nums1, nums2);
-            // Then
-            Assert.Equal(2.00000, acual);
-        }
-
-        [Fact]
-        public void Test2()
-        {
-            // Given
-            var nums1 = new int[] { 1, 2 };
-            var nums2 = new int[] { 3, 4 };
-            // When
-            var acual = sut.Solution(nums1, nums2);
-            // Then
-            Assert.Equal(2.50000, acual);
-        }
-
-        [Fact]
-        public void Test3()
-        {
-            // Given
-            var nums1 = new int[] { 1, 1 };
-            var nums2 = new int[] { 1, 2 };
-            // When
-            var acual = sut.Solution(nums1, nums2);
-            // Then
-            Assert.Equal(1.00000, acual);
-        }
+        // Given
+        // When
+        var actual = MedianofTwoSortedArrays.Solution(nums1, nums2);
+        // Then
+        Assert.Equal(expected, actual);
     }
 }
