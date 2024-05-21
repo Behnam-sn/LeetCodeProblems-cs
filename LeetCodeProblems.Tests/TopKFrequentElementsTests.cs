@@ -2,36 +2,15 @@
 {
     public class TopKFrequentElementsTests
     {
-        private readonly TopKFrequentElements sut;
-
-        public TopKFrequentElementsTests()
-        {
-            sut = new();
-        }
-
-        [Fact]
-        public void Test1()
+        [Theory]
+        [InlineData(new int[] { 1, 1, 1, 2, 2, 3 }, 2, new int[] { 1, 2 })]
+        [InlineData(new int[] { 1 }, 1, new int[] { 1 })]
+        public void Test(int[] nums, int k, int[] expected)
         {
             // Given
-            var nums = new int[] { 1, 1, 1, 2, 2, 3 };
-            var k = 2;
             // When
-            var actual = sut.Solution(nums, k);
+            var actual = TopKFrequentElements.Solution(nums, k);
             // Then
-            var expected = new int[] { 1, 2 };
-            Assert.Equal(expected, actual);
-        }
-
-        [Fact]
-        public void Test2()
-        {
-            // Given
-            var nums = new int[] { 1 };
-            var k = 1;
-            // When
-            var actual = sut.Solution(nums, k);
-            // Then
-            var expected = new int[] { 1 };
             Assert.Equal(expected, actual);
         }
     }

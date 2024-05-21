@@ -2,7 +2,7 @@
 
 public class TopKFrequentElements
 {
-    public int[] Solution(int[] nums, int k)
+    public static int[] Solution(int[] nums, int k)
     {
         if (nums.Length == 0 || nums.Length == 1)
         {
