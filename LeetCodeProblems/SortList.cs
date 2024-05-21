@@ -3,7 +3,7 @@ using LeetCodeProblems.Shared;
 namespace LeetCodeProblems;
 public class SortList
 {
-    public ListNode? Solution(ListNode? head)
+    public static ListNode? Solution(ListNode? head)
     {
         if (head == null) return null;
 
