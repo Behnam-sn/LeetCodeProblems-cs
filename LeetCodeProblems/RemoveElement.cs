@@ -5,7 +5,24 @@ namespace LeetCodeProblems;
 
 public class RemoveElement
 {
-    public static int Solution(int[] nums, int val)
+    public static int Solution1(int[] nums, int val)
+    {
+        var valOccurrenceCount = 0;
+
+        for (var i = 0; i < nums.Length; i++)
+        {
+            if (nums[i] == val)
+            {
+                nums[i] = int.MaxValue;
+                valOccurrenceCount++;
+            }
+        }
+        Array.Sort(nums);
+
+        return nums.Length - valOccurrenceCount;
+    }
+
+    public static int Solution2(int[] nums, int val)
     {
         var valOccurrenceCount = 0;
         var j = nums.Length - 1;
@@ -35,20 +52,17 @@ public class RemoveElement
         return nums.Length - valOccurrenceCount;
     }
 
-    public static int Solution1(int[] nums, int val)
+    public static int Solution3(int[] nums, int val)
     {
-        var k = 0;
-
-        for (var i = 0; i < nums.Length; i++)
+        var j = 0;
+        for (int i = 0; i < nums.Length; i++)
         {
-            if (nums[i] == val)
+            if (nums[i] != val)
             {
-                nums[i] = int.MaxValue;
-                k++;
+                nums[j] = nums[i];
+                j++;
             }
         }
-        Array.Sort(nums);
-
-        return nums.Length - k;
+        return j;
     }
 }
