@@ -7,30 +7,32 @@ public class RemoveElement
 {
     public static int Solution(int[] nums, int val)
     {
-        var k = 0;
+        var valOccurrenceCount = 0;
         var j = nums.Length - 1;
 
         for (var i = 0; i <= j; i++)
         {
+            while (j >= 0 && nums[j] == val)
+            {
+                j--;
+                valOccurrenceCount++;
+            }
+
+            if (j < i)
+            {
+                break;
+            }
+
             if (nums[i] == val)
             {
-                k++;
-                while (nums[j] == val && j != 0 && i != j)
-                {
-                    j--;
-                    k++;
-                }
-
-                if (i != j)
-                {
-                    nums[i] = nums[j];
-                    nums[j] = val;
-                    j--;
-                }
+                nums[i] = nums[j];
+                nums[j] = val;
+                j--;
+                valOccurrenceCount++;
             }
         }
 
-        return nums.Length - k;
+        return nums.Length - valOccurrenceCount;
     }
 
     public static int Solution1(int[] nums, int val)
