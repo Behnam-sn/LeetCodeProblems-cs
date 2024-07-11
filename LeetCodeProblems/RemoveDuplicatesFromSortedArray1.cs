@@ -2,7 +2,7 @@ namespace LeetCodeProblems;
 
 // https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
 
-public class RemoveDuplicatesFromSortedArray
+public class RemoveDuplicatesFromSortedArray1
 {
     public static int Solution1(int[] nums)
     {

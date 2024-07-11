@@ -1,6 +1,6 @@
 namespace LeetCodeProblems.Tests;
 
-public class RemoveDuplicatesFromSortedArrayTests
+public class RemoveDuplicatesFromSortedArray1Tests
 {
     [Theory]
     [InlineData(new int[] { 1, 1, 2 }, new int[] { 1, 2 })]
@@ -9,7 +9,7 @@ public class RemoveDuplicatesFromSortedArrayTests
     {
         // Given
         // When
-        var k = RemoveDuplicatesFromSortedArray.Solution4(nums);
+        var k = RemoveDuplicatesFromSortedArray1.Solution4(nums);
         // Then
         Assert.Equal(expected.Length, k);
         for (var i = 0; i < expected.Length; i++)
