@@ -15,7 +15,7 @@ public class RemoveDuplicatesFromSortedArray2Tests
     {
         // Given
         // When
-        var k = RemoveDuplicatesFromSortedArray2.Solution1(nums);
+        var k = RemoveDuplicatesFromSortedArray2.Solution2(nums);
         // Then
         Assert.Equal(expected.Length, k);
         for (var i = 0; i < expected.Length; i++)
