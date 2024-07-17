@@ -1,0 +1,76 @@
+﻿namespace LeetCodeProblems;
+
+public class ReverseWordsInAString
+{
+    public static string Solution1(string s)
+    {
+        if (s == null || s == "" || s == " ")
+        {
+            return "";
+        }
+
+        if (s.Length == 1)
+        {
+            return s;
+        }
+
+        var result = "";
+        var head = s.Length;
+        var tail = s.Length;
+
+        for (var i = s.Length - 1; i > -2; i--)
+        {
+            if (i == -1 || s[i] == ' ')
+            {
+                if (head == tail)
+                {
+                    head = i;
+                    tail = i;
+                    continue;
+                }
+
+                result += s[head..tail] + " ";
+                head = i;
+                tail = i;
+            }
+            else
+            {
+                head = i;
+            }
+        }
+
+        return result[..^1];
+    }
+
+    public static string Solution2(string s)
+    {
+        if (s == null || s == "" || s == " ")
+        {
+            return "";
+        }
+
+        if (s.Length == 1)
+        {
+            return s;
+        }
+
+        var words = new List<string>();
+        var head = s.Length;
+        var tail = s.Length;
+
+        for (var i = s.Length - 1; i > -2; i--)
+        {
+            if (i == -1 || s[i] == ' ')
+            {
+                if (head != tail)
+                {
+                    words.Add(s[head..tail]);
+                }
+                tail = i;
+            }
+            head = i;
+        }
+
+        return string.Join(" ", words);
+    }
+}
