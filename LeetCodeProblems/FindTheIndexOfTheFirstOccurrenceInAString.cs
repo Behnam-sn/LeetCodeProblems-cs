@@ -9,11 +9,6 @@ public class FindTheIndexOfTheFirstOccurrenceInAString
             return -1;
         }
 
-        if (haystack == needle)
-        {
-            return 0;
-        }
-
         for (var i = 0; i < haystack.Length; i++)
         {
             if (haystack[i] == needle[0])
@@ -50,11 +45,6 @@ public class FindTheIndexOfTheFirstOccurrenceInAString
             return -1;
         }
 
-        if (haystack == needle)
-        {
-            return 0;
-        }
-
         for (var i = 0; i < haystack.Length; i++)
         {
             if (haystack[i] == needle[0])
@@ -86,11 +76,6 @@ public class FindTheIndexOfTheFirstOccurrenceInAString
         if (haystack.Length < needle.Length)
         {
             return -1;
-        }
-
-        if (haystack == needle)
-        {
-            return 0;
         }
 
         var j = 0;
