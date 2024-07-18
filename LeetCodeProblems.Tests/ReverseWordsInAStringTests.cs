@@ -14,7 +14,7 @@ public class ReverseWordsInAStringTests
     {
         // Given
         // When
-        var actual = ReverseWordsInAString.Solution2(s);
+        var actual = ReverseWordsInAString.Solution4(s);
         // Then
         Assert.Equal(expected, actual);
     }
