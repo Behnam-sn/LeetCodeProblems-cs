@@ -2,7 +2,7 @@ namespace LeetCodeProblems;
 
 // https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
 
-public class BestTimeToBuyAndSellStock
+public class BestTimeToBuyAndSellStock1
 {
     public static int Solution1(int[] prices)
     {

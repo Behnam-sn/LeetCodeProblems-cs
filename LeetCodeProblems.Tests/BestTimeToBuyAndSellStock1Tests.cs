@@ -1,6 +1,6 @@
 namespace LeetCodeProblems.Tests;
 
-public class BestTimeToBuyAndSellStockTests
+public class BestTimeToBuyAndSellStock1Tests
 {
     [Theory]
     [InlineData(null, 0)]
@@ -13,7 +13,7 @@ public class BestTimeToBuyAndSellStockTests
     {
         // Given
         // When
-        var actual = BestTimeToBuyAndSellStock.Solution2(prices);
+        var actual = BestTimeToBuyAndSellStock1.Solution2(prices);
         // Then
         Assert.Equal(expected, actual);
     }
