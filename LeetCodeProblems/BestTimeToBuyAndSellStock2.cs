@@ -57,6 +57,37 @@ public class BestTimeToBuyAndSellStock2
         return maxProfit;
     }
 
+    private static void D1(List<PossibleDeal> deals, PossibleDeal pd)
+    {
+        var isAdded = false;
+        foreach (var possibleDeal in deals)
+        {
+            if (possibleDeal.SellAt < pd.BuyAt)
+            {
+                var status = D2(possibleDeal.NextDeals, pd);
+                if (status is true)
+                {
+                    isAdded = true;
+                }
+            }
+        }
+        if (isAdded is not true)
+        {
+            deals.Add(pd);
+        }
+    }
+
+    private static bool D2(List<PossibleDeal> a, PossibleDeal b)
+    {
+
+        return true;
+    }
+
+    private static void L1(List<PossibleDeal> deals)
+    {
+
+    }
+
     private static bool Deal(List<PossibleDeal> deals, PossibleDeal pd, bool deled = false)
     {
         foreach (var possibleDeal in deals)
@@ -77,8 +108,5 @@ public class BestTimeToBuyAndSellStock2
         return deled;
     }
 
-    public static int Solution2(int[] prices)
-    {
-        throw new NotImplementedException();
-    }
+
 }

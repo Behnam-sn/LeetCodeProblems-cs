@@ -11,7 +11,7 @@ public class BestTimeToBuyAndSellStock2Tests
     {
         // Given
         // When
-        var actual = BestTimeToBuyAndSellStock2.Solution2(prices);
+        var actual = BestTimeToBuyAndSellStock2.Solution1(prices);
         // Then
         Assert.Equal(expected, actual);
     }
